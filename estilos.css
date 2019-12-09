@@ -1,0 +1,66 @@
+body{
+
+    background-color: lightgrey;
+}
+li{
+    font-size: 12px;
+}
+p{
+ font-size: 12px;   
+}
+.bloque-titulo{
+display: block;
+    width: 500px;
+    padding-left: 500px;
+    text-align: center;
+}
+#bloque-ingrediente{
+display: block;
+    text-align: left;
+    width: 355px;
+    height: 40px;
+    padding-left: 405px;
+    padding-right: 0px
+}
+#bloque-contenido{
+ display: block;
+    float: right;
+    margin-top: -66px;
+    height: 20px;
+    width: 709px;
+    margin-left: 0px;
+    text-align: justify;
+    margin-right: 174px;
+}
+.containter{
+    display: block;
+    text-align: center;
+    padding: 0px;
+}
+#bloque-video{
+        display: block;
+    width: 561px;
+    padding-top: 520px;
+    padding-bottom: 10px;
+    height: 316px;
+    margin-left: 550px;
+}
+#bloque-tabla{
+width: 500PX;
+
+}
+table{
+    font-size: 16px;
+    width: 400px;
+    align-content: center;
+    margin-left: 450px;
+    margin-top: 20px;
+}
+table tr td{
+    padding: 5px;
+    text-align: center;
+}
+table tr td span{
+font-size: 20px;
+
+}
