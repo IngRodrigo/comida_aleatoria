@@ -10,5 +10,5 @@ function obtenerConexion(){
 return $pdo;
 }
 function cerraConexion(){
-    $pdo=null;
+    $pdo=null;  
 }

@@ -1,9 +1,9 @@
 body{
-
-    background-color: lightgrey;
+    background-color: blueviolet;
+    color: white;
 }
 li{
-    font-size: 12px;
+    font-size: 15px;
 }
 p{
  font-size: 12px;   
@@ -38,7 +38,7 @@ display: block;
     padding: 0px;
 }
 #bloque-video{
-        display: block;
+    display: block;
     width: 561px;
     padding-top: 520px;
     padding-bottom: 10px;
@@ -60,7 +60,43 @@ table tr td{
     padding: 5px;
     text-align: center;
 }
+table tr td a{
+        text-decoration: none;
+        color: white;
+}
+table tr td a:hover{
+    box-shadow: 6px 5px 24px darkslategray;
+}
 table tr td span{
 font-size: 20px;
-
+}
+.boton{
+  background: #eb94d0;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+text-shadow: 3px 2px 1px #9daef5;
+  box-shadow: 6px 5px 24px #666666;
+font-family: Arial; 
+  color: #fafafa;
+  font-size: 15px;
+  padding: 19px;
+  text-decoration: none;
+}
+.boton:hover {
+  background: #2079b0;
+}
+.boton-buscar{
+    text-decoration:none;
+font-weight:600;
+font-size:20px;
+color:#ffffff;
+padding-top:20px;
+padding-bottom:20px;
+padding-left:40px;
+padding-right:40px;
+background-color:#005BBB;
+}
+h1{
+    color: darkgreen;
 }

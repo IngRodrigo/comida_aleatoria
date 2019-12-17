@@ -11,20 +11,26 @@ $lista = obtenerComidas();
     <body>  
         <div class="containter">
             <h1>DALE CLICK PARA VER UNA RECETA</h1>
-            <button id="btnCargar" name="mostrar">Mostrar recetas</button>
-            </div>
-            <div class="bloque-titulo">
-                <h1>Lista de comidas</h1>
-            </div>
-            <div id="bloque-tabla">
-                <table>
-                    <tr>
-                        <td><span>CODIGO</span></td>
-                        <td><span>COMIDA</span></td>
-                        <td><span>IMAGEN</span></td>
-                        <td><span>VIDEO</span></td>
-                    </tr>
-                    <?php
+            
+        </div>
+        <div class="bloque-titulo">
+            <h1>MILES DE RECETAS A SU ALCANCE</h1>
+<button id="btnCargar" name="mostrar" class="boton">Mostrar recetas</button>
+        </div>
+
+        <div id="bloque-tabla">
+            <?php
+            
+            if (isset($lista)) {
+            echo"<table>";
+                echo "<tr>";
+                    echo"<td><span>CODIGO</span></td>";
+                    echo"<td><span>COMIDA</span></td>";
+                    echo"<td><span>IMAGEN</span></td>";
+                    echo"<td><span>VIDEO</span></td>";
+                echo"</tr>";
+                
+                
                     foreach ($lista as $key => $value) {
                         echo '<tr>';
                         echo"<td>$value[0]</td>";
@@ -33,11 +39,12 @@ $lista = obtenerComidas();
                         echo"<td><a href=$value[5]>Preparación</a></td>";
                         echo '</tr>';
                     }
-                    ?>
+                }
+            echo "</table>"
+                ?>
+                
+        </div>
 
-                </table>    
-            </div>
-        
     </body>
     <script src="js.js"></script>
 </html>

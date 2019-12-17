@@ -1,10 +1,16 @@
 <?php
 include_once './Procesos.php';
-if ((obtenerComidas()) > 0) {
-    $lista = obtenerComidas();
+
+
+if(isset($_GET['palabra'])){
+    $palabra=$_GET['palabra'];
+    if ((obtenerComidas()) > 0) {
+    $lista = obtenerComidasPorParametro($palabra);
 } else {
     $lista = false;
 }
+}
+
 ?>
 <html>
     <head>
@@ -21,11 +27,11 @@ if ((obtenerComidas()) > 0) {
                 <h1>Lista de comidas</h1>
             </div>
 
-            <form method="GET" action="lista_comida_busqueda.php" name="formulario">
+             <form method="GET" action="lista_comida_busqueda.php" name="formulario">
 
                 <input type="text" placeholder="Buscar comida" name="palabra" id="palabra">
 
-                <input id="buscar" type="submit" value="Buscar" name="buscar"class="boton-buscar">
+                <input id="buscar" type="submit" value="Buscar" name="buscar" class="boton-buscar">
 
             </form>
             <div id="bloque-tabla">
@@ -43,17 +49,18 @@ if ((obtenerComidas()) > 0) {
                             echo"<td>$value[0]</td>";
                             echo"<td>$value[1]</td>";
                             echo"<td><img src=" . $value[4] . " width='" . "100'" . " height='" . "100'" . "></td>";
-                            echo"<td><a href=$value[5]>PREPARACION</a></td>";
+                            echo"<td><a href=$value[5]>Preparación</a></td>";
                             echo '</tr>';
                         }
-                    }else{
-                        echo '<tr>';
+                    }
+                    else{
+                            echo '<tr>';
                                 echo '<td>No hay resultados que mostrar</td>';
                             echo '</tr>';
                         
                     }
                     ?>
-
+                    
                 </table>    
             </div>
 

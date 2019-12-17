@@ -10,8 +10,8 @@ $data = json_decode(file_get_contents("https://www.themealdb.com/api/json/v1/1/r
     <body>  
         <div class="containter">
             <h1>DALE CLICK PARA VER UNA RECETA</h1>
-            <button id="btnCargar" name="mostrar">Mostrar recetas</button>
-            <button id="btnMostrarTodo" name="mostrar-todo">Todas las recetas vistas</button>
+            <button id="btnCargar" name="mostrar" class="boton">Mostrar recetas</button>
+            <button id="btnMostrarTodo" name="mostrar-todo" class="boton">Todas las recetas vistas</button>
             <div class="bloque-titulo">
                 <?php
                 foreach ($data as $value) {
@@ -36,6 +36,7 @@ $data = json_decode(file_get_contents("https://www.themealdb.com/api/json/v1/1/r
                         }
                     }
                 }
+                
                 $todosLosIngredientes = implode(", ", $arrayIngredientes);
                
                 ?>

@@ -1,5 +1,6 @@
 var btnCargar = document.getElementById('btnCargar');
 var btnListar = document.getElementById('btnMostrarTodo');
+var btnBuscar=document.getElementById('buscar');
 
 btnCargar.onclick = function () {
     console.log("funciona");
